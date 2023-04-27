@@ -1,0 +1,29 @@
+import java.util.*;
+class OOP{
+    public static void main(String[] args){
+        Dog pug=new Dog();
+        pug.legs=4;
+        pug.color="black";
+        System.out.println(pug.legs);
+        System.out.println(pug.color);
+        
+
+    }
+}
+
+class Animals{
+    String color;
+    void eat(){
+        System.out.println("eats");
+    }
+    void breathe(){
+        System.out.println("breathes");
+    }
+}
+// Multi-level inheritence
+class Mammals extends Animals{
+    int legs;
+}
+class Dog extends Mammals{
+    String breed;
+}
