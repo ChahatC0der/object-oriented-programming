@@ -1,0 +1,56 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+import java.util.jar.Attributes.Name;
+
+public class javabasics{    
+    public static void main(String[] args){
+        boolean createEmailId=false;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Press y to Create new Email Id,otherwise no");
+        String createOrNot = sc.nextLine();
+        if(createOrNot.compareTo("y")==0){
+            createEmailId=true;
+        }
+        if(createEmailId==true){
+        // creating emailId
+        System.out.println("Enter username");
+        String name = sc.nextLine();    
+        Gmail user1 = new Gmail(name);   
+        // Entering/registering username 
+        System.out.println(user1.username);    
+        // Entering emailId
+        System.out.println("Enter emailId");
+        String email = sc.nextLine();
+        user1.email=email; 
+        System.out.println(user1.email);    
+        // Entering password
+        System.out.println("Enter userpassword");
+        String password = sc.nextLine();
+        user1.setPassword(password); 
+        System.out.println(user1.getPassword());
+        }else{
+            System.out.println("nahi tujhe to krni hi pdegi,kyunki hmare yahan aisa hi hota hai");
+        }
+    }
+}
+class Gmail{
+    String username;
+    String email;
+    private String Password;
+    void setUsername(String name) {
+        username=name;       
+    }
+    void setEmail(String email){
+        email=email;
+    }
+    void setPassword(String password){
+        Password=password;
+    }
+    String getPassword(){
+        return Password;
+    }
+    // Parameterised constructor
+    Gmail(String name){
+        this.username=name;
+    }
+}
