@@ -1,0 +1,41 @@
+import java.util.*;
+class OOP{
+    public static void main(String[] args){
+        Dog pug= new Dog();
+        pug.eat();
+        pug.breathes();
+        System.out.println(pug.color);
+        fish jellyFish = new fish();
+        jellyFish.eat();
+        jellyFish.breathes();
+    }
+}
+
+abstract class Animals{
+    Animals(){
+        color="blue";
+    }
+    String color;
+    void eat(){
+        System.out.println("eats");
+    }
+    abstract void breathes();
+}
+class Dog extends Animals{
+    Dog(){
+        color="black";
+    }
+    void eat(){
+        System.out.println("eats biscuits");
+    }
+    void breathes(){
+        System.out.println("breathes in air");
+    }
+}
+class fish extends Animals{
+    void breathes(){
+        System.out.println("breathes in water");
+    }
+}
+
+
